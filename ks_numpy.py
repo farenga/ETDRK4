@@ -2,7 +2,7 @@ import numpy as np
 from numpy.fft import fft, ifft
 import matplotlib.pyplot as plt
 
-# Spatial Grid and Initial Condition:
+# Spatial grid and initial condition
 N = 128
 x = 32*np.pi*np.arange(1,N+1)/N
 u = np.cos(x/16)*(1+np.sin(x/16))

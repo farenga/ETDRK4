@@ -2,7 +2,7 @@ import torch as th
 from torch.fft import fft, ifft
 import matplotlib.pyplot as plt
 
-# Spatial Grid and Initial Condition:
+# Spatial grid and initial condition
 N = 128
 x = 32*th.pi*th.arange(1,N+1)/N
 u = th.cos(x/16)*(1+th.sin(x/16))
