@@ -15,7 +15,7 @@ L = k**2 - k**4
 E = (h*L).exp()
 E2 = (h*L/2).exp()
 M = 16
-r = (1j*th.pi*(th.arange(1,M+1)-.5)/M)
+r = th.exp(1j*th.pi*(th.arange(1,M+1)-.5)/M)
 LR = h*L[:,None].repeat_interleave(M,1) + r[None,:].repeat_interleave(N,0)
 Q = h*(((LR/2).exp()-1)/LR).mean(dim=1).real
 f1 = h*((-4-LR+LR.exp()*(4-3*LR+LR**2))/LR**3).mean(dim=1).real
